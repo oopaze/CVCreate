@@ -1,12 +1,12 @@
 import json
 
 class formacao:
-	def __init__(self, instituicao, cidade, estado, curso, ano):
+	def __init__(self, instituicao, cidade, curso, ano, horas=None):
 		self.instituicao = instituicao
 		self.cidade = cidade
-		self.estado = estado
 		self.curso = curso
 		self.ano = ano
+		self.horas = horas
 
 class emprego:
 	def __init__(self, empresa, cargo, entrada, saida, funcao):
@@ -39,8 +39,10 @@ class pessoais:
 
 pessoais_ = pessoais('José Pedro da Silva Gomes', '88 9 92266091', 'Pedroosd28@gmail.com', 'Crato-CE', '/oopaze', '/in/oopaze').__dict__
 
-formacao_ = {'1':formacao('Governador Adauto Bezerra', 'Crato', 'CE', 'Ensino Medio', 'Concluido - 2019').__dict__,
-			 '2':formacao('Instituto Federal do Ceará', 'Crato', 'CE', 'Sistemas de Informação', 'Cursando - 2019').__dict__}
+formacao_ = {'1':formacao('Governador Adauto Bezerra', 'Crato-CE', 'Ensino Medio', 'Concluido - 2019').__dict__,
+			 '2':formacao('Instituto Federal do Ceará', 'Crato-CE', 'Sistemas de Informação', 'Cursando - 2020').__dict__,
+			 '3':formacao('IAExpert', 'Remoto', 'Redes Neurais Artificiais em Python', 'Concluido - 29/06/2020', '80').__dict__,
+			 '4':formacao('Udemy', 'Remoto', 'Python para Data Science e Machine Learning - Completo', 'Concluido - 15/06/2020', '18').__dict__}
 
 emprego_ = []
 
