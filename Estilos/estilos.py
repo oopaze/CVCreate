@@ -2,6 +2,31 @@ from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.shared import Inches, Pt, RGBColor
 from docx import Document
 
+class Padrao():
+	def __init__(self, CV):
+		self.CV = CV
+
+	def subtitles(text, document):
+		...
+	
+	def pessoais(text, document):
+		...
+
+	def formacao(text, document):
+		...
+
+	def experiencia(text, document):
+		...
+
+	def habilidades(text, document):
+		...
+		
+	def projetos(text, document):
+		...
+
+	def save():
+		...
+
 filename = '../Files/José Pedro da Silva Gomes-CV.docx'
 CV = Document(filename)
 base = Document()
@@ -56,6 +81,18 @@ def pessoais(text, document):
 			run2.font.name = 'Calibri'
 			run2.font.size = Pt(11)
 
+def formacao(text, document):
+	...
+
+def experiencia(text, document):
+	...
+
+def habilidades(text, document):
+	...
+
+def projetos(text, document):
+	...
+
 paragraphs = []
 for paragraph in CV.paragraphs:
 	for line in paragraph.text.split('\n'):
@@ -69,7 +106,4 @@ pessoais(paragraphs, base)
 
 base.save("../Files/base.docx")
 
-class Padrao():
-	def __init__(self, CV):
-		self.CV = CV
 
