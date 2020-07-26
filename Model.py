@@ -1,7 +1,6 @@
 from docx import Document
 from json import loads
-from Model.forms import (formacao, emprego, habilidades,
-						projetos, jsonfields, pessoais)
+from Model.forms import jsonfields
 
 class CVWritter():
 	def __init__(self, data, CVmodel):
